@@ -110,9 +110,7 @@ function main() {
             console.log(total_proportion);
             for (var i = 1; i < lines.length - 1; i++) {
                 var _d = lines[i].split(','), address_1 = _d[0], liquid_amount_1 = _d[1], liquid_period_1 = _d[2], reward_amount_1 = _d[3];
-                var date = new Date(liquid_period_1);
-                console.log(date.toString());
-                lines[i] = "".concat(address_1, ",").concat(liquid_amount_1, ",").concat(date.toString(), ",").concat(parseFloat(liquid_amount_1) * parseFloat(liquid_period_1) / total_proportion);
+                lines[i] = "".concat(address_1, ",").concat(liquid_amount_1, ",").concat(parseFloat(liquid_period_1), ",").concat(parseFloat(liquid_amount_1) * parseFloat(liquid_period_1) / total_proportion);
             }
             return lines;
         }
